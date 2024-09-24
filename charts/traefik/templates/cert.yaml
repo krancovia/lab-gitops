@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: traefik-dashboard
+  namespace: traefik
+spec:
+  commonName: traefik.lab.krancovia.io
+  dnsNames:
+  - traefik.lab.krancovia.io
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: letsencrypt-gandi
+  secretName: traefik-dashboard-tls
