@@ -6,9 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://charts.longhorn.io
-    chart: longhorn
-    targetRevision: 1.7.1
+    repoURL: https://github.com/krancovia/lab-gitops.git
+    path: charts/longhorn
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
