@@ -194,9 +194,9 @@ longhorn:
 
   defaultSettings:
     # -- Endpoint used to access the backupstore. (Options: "NFS", "CIFS", "AWS", "GCP", "AZURE")
-    backupTarget: ~
+    backupTarget: s3://kent-longhorn-backup@us-east-1/
     # -- Name of the Kubernetes secret associated with the backup target.
-    backupTargetCredentialSecret: ~
+    backupTargetCredentialSecret: s3-credentials
     # -- Setting that allows Longhorn to automatically attach a volume and create snapshots or backups when recurring jobs are run.
     allowRecurringJobWhileVolumeDetached: ~
     # -- Setting that allows Longhorn to automatically create a default disk only on nodes with the label "node.longhorn.io/create-default-disk=true" (if no other disks exist). When this setting is disabled, Longhorn creates a default disk on each node that is added to the cluster.
