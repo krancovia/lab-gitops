@@ -1,0 +1,12 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteUDP
+metadata:
+  name: minecraft
+  namespace: {{ .Release.Namespace }}
+spec:
+  entryPoints:
+  - minecraft
+  routes:
+  - services:
+    - name: minecraft-minecraft-bedrock
+      port: 19132
