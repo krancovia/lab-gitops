@@ -584,6 +584,12 @@ traefik:
   envFrom: []
 
   ports:
+    minecraft:
+      port: 19132
+      expose:
+        default: true
+      exposedPort: 19132
+      protocol: UDP
     traefik:
       port: 9000
       # -- Use hostPort if set.
