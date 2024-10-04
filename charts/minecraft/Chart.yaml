@@ -1,0 +1,9 @@
+apiVersion: v2
+name: minecraft
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+dependencies:
+- repository: https://itzg.github.io/minecraft-server-charts
+  name: minecraft-bedrock
+  version: 2.8.1
