@@ -270,7 +270,7 @@ kube-prom-stack:
 
     ## Deploy alertmanager
     ##
-    enabled: true
+    enabled: false
 
     ## Annotations for Alertmanager
     ##
