@@ -5,9 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/krancovia/lab-gitops.git
-    path: charts/argocd
+  sources:
+  - repoURL: https://argoproj.github.io/argo-helm
+    chart: argo-cd
+    targetRevision: 7.6.1
+    helm:
+      valueFiles:
+      - $values/argocd/values.yaml
+  - repoURL: https://github.com/krancovia/lab-gitops.git
+    path: argocd/manifests
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd

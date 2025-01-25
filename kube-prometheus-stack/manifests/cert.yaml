@@ -1,14 +1,13 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: longhorn-dashboard
-  namespace: {{ .Release.Namespace }}
+  name: grafana
 spec:
-  commonName: longhorn.lab.krancovia.io
+  commonName: grafana.lab.krancovia.io
   dnsNames:
-  - longhorn.lab.krancovia.io
+  - grafana.lab.krancovia.io
   issuerRef:
     group: cert-manager.io
     kind: ClusterIssuer
     name: letsencrypt-gandi
-  secretName: longhorn-tls
+  secretName: grafana-tls
